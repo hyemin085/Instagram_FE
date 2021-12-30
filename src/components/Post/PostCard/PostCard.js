@@ -143,17 +143,22 @@ const PostCard = ({contents, createdAt, writer, postId, likeUsers, likeCount, os
 
   return (
     <>
+
       {likeOpen && <PostLikeModal likeOpen={likeOpen} SetLikeOpen={SetLikeOpen} postId={postId}/>}
+
       {/*myId={myId}*/}
       {openModal && <PostModal postId={postId} setOpenModal={setOpenModal} writer={writer[0].userId}/>}
+
       <div className="post_cards">
         <div className="post_card">
           <div className="post_header">
             <div className="profile_img">
               <img className="post_user_image" src={user_img}/>
+
               <div className="post_user_id" onClick={UserProfileClickHandler}>{writer[0].userId}</div>
               <div className="profile_img_dot" onClick={show_postOptionModal}>
                 <img src={dot}/>
+
               </div>
             </div>
             <div className="post_center">
